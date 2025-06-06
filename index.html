@@ -19,10 +19,13 @@
     <div class="radio-group">
       <label><input type="radio" name="escopo" value="medical" onclick="verificarCampos()"> Medical</label>
       <label><input type="radio" name="escopo" value="escopo2" onclick="verificarCampos()"> Eletrodoméstico</label>
+      <label><input type="radio" name="escopo" value="anatel" onclick="verificarCampos()"> Anatel</label>
+      <label><input type="radio" name="escopo" value="potencia_sonora" onclick="verificarCampos()"> Potência Sonora</label>
+      <label><input type="radio" name="escopo" value="equipos" onclick="verificarCampos()"> Equipos</label>
     </div>
 
-    <h3>Ficou devendo ensaios?</h3>
-    <div class="radio-group">
+    <h3 id="devendoContainerTitle">Ficou devendo ensaios?</h3>
+    <div class="radio-group" id="devendoContainer">
       <label><input type="radio" name="devendo" value="sim" onclick="verificarCampos()"> Sim</label>
       <label><input type="radio" name="devendo" value="nao" onclick="verificarCampos()"> Não</label>
     </div>
