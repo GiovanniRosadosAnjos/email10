@@ -1,0 +1,119 @@
+body {
+  font-family: 'Century Gothic', Arial, sans-serif;
+  background-color: #f9f9f9;
+  color: #333;
+  padding: 15px 2cm;
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+h2 {
+  text-align: center;
+  color: #005a9c;
+  margin-bottom: 20px;
+  font-weight: 700;
+  font-size: 1.4rem;
+}
+
+h3 {
+  margin-top: 15px;
+  margin-bottom: 8px;
+  color: #007acc;
+  font-weight: 600;
+  font-size: 1rem;
+  border-bottom: 2px solid #007acc;
+  padding-bottom: 3px;
+}
+
+label {
+  display: inline-block;
+  font-size: 14px;
+  margin-right: 10px;
+  cursor: pointer;
+  line-height: 1.2;
+}
+
+input[type="text"] {
+  padding: 6px 8px;
+  font-size: 14px;
+  border: 2px solid #ddd;
+  border-radius: 5px;
+  margin-top: 4px;
+  margin-bottom: 10px;
+  display: block;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+input[type="text"]:focus {
+  border-color: #007acc;
+  outline: none;
+}
+
+input[type="radio"] {
+  margin-right: 4px;
+  cursor: pointer;
+  vertical-align: middle;
+}
+
+button {
+  margin-top: 12px;
+  padding: 8px 18px;
+  background-color: #007acc;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  font-weight: 600;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  display: block;
+  width: 100%;
+}
+
+button:hover:not(:disabled) {
+  background-color: #005a9c;
+}
+
+button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+textarea {
+  width: 100%;
+  height: 150px;
+  margin-top: 10px;
+  padding: 10px;
+  font-size: 13px;
+  border-radius: 5px;
+  border: 2px solid #ddd;
+  resize: vertical;
+  background-color: #fff;
+  color: #444;
+  box-shadow: inset 0 1px 3px rgba(0,0,0,0.1);
+  font-family: 'Century Gothic', Arial, sans-serif;
+  line-height: 1.4;
+}
+
+.field-group {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-bottom: 15px;
+}
+
+.field-group > div {
+  flex: 1;
+  min-width: 200px;
+}
+
+@media (max-width: 768px) {
+  body {
+    padding: 15px;
+  }
+  .field-group {
+    flex-direction: column;
+  }
+}
