@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8" />
+<title>Gerador de Email</title>
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<h2>Gerador de Email Padrão para envio do certificado </h2>
+
+<label for="nomeCliente"><b>Nome do Cliente:</b></label><br/>
+<input type="text" id="nomeCliente" placeholder="Digite o nome do cliente (nome da pessoa, que irá receber o certificado)" oninput="verificarCampos()" /><br/>
+
+<div class="field-group">
+  <div>
+    <h3>Escolha o Escopo:</h3>
+    <label><input type="radio" name="escopo" value="medical" onclick="verificarCampos()"> Medical</label><br/>
+    <label><input type="radio" name="escopo" value="escopo2" onclick="verificarCampos()"> Eletrodoméstico </label>
+  </div>
+
+  <div>
+    <h3>Ficou devendo ensaios?</h3>
+    <label><input type="radio" name="devendo" value="sim" onclick="verificarCampos()"> Sim</label><br/>
+    <label><input type="radio" name="devendo" value="nao" onclick="verificarCampos()"> Não</label>
+  </div>
+</div>
+
+<button id="btnGerar" onclick="gerarEmail()" disabled>Gerar Email</button>
+
+<h3>Email Gerado:</h3>
+<textarea id="emailOutput" readonly></textarea>
+
+<script src="script.js"></script>
+</body>
+</html>
