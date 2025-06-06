@@ -7,29 +7,36 @@
 </head>
 <body>
 
-<h2>Gerador de Email Padrão para envio do certificado </h2>
+<h2>Gerador de Email Padrão para envio do certificado</h2>
 
-<label for="nomeCliente"><b>Nome do Cliente:</b></label><br/>
-<input type="text" id="nomeCliente" placeholder="Digite o nome do cliente (nome da pessoa, que irá receber o certificado)" oninput="verificarCampos()" /><br/>
+<div class="container">
+  <div class="left-section">
 
-<div class="field-group">
-  <div>
+    <label for="nomeCliente"><b>Nome do Cliente:</b></label>
+    <input type="text" id="nomeCliente" placeholder="Digite o nome do cliente (nome da pessoa, que irá receber o certificado)" oninput="verificarCampos()" />
+
     <h3>Escolha o Escopo:</h3>
-    <label><input type="radio" name="escopo" value="medical" onclick="verificarCampos()"> Medical</label><br/>
-    <label><input type="radio" name="escopo" value="escopo2" onclick="verificarCampos()"> Eletrodoméstico </label>
+    <div class="radio-group">
+      <label><input type="radio" name="escopo" value="medical" onclick="verificarCampos()"> Medical</label>
+      <label><input type="radio" name="escopo" value="escopo2" onclick="verificarCampos()"> Eletrodoméstico</label>
+    </div>
+
+    <h3>Ficou devendo ensaios?</h3>
+    <div class="radio-group">
+      <label><input type="radio" name="devendo" value="sim" onclick="verificarCampos()"> Sim</label>
+      <label><input type="radio" name="devendo" value="nao" onclick="verificarCampos()"> Não</label>
+    </div>
+
+    <button id="btnGerar" onclick="gerarEmail()" disabled>Gerar Email</button>
+
   </div>
 
-  <div>
-    <h3>Ficou devendo ensaios?</h3>
-    <label><input type="radio" name="devendo" value="sim" onclick="verificarCampos()"> Sim</label><br/>
-    <label><input type="radio" name="devendo" value="nao" onclick="verificarCampos()"> Não</label>
+  <div class="right-section">
+    <h3>Email Gerado:</h3>
+    <textarea id="emailOutput" readonly></textarea>
+    <button id="btnCopiar" onclick="copiarEmail()">Copiar Email</button>
   </div>
 </div>
-
-<button id="btnGerar" onclick="gerarEmail()" disabled>Gerar Email</button>
-
-<h3>Email Gerado:</h3>
-<textarea id="emailOutput" readonly></textarea>
 
 <script src="script.js"></script>
 </body>
